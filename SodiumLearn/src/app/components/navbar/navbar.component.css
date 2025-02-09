@@ -1,0 +1,34 @@
+/* Ensure Navbar Stays Fixed */
+.navbar {
+  z-index: 1050;
+}
+
+/* Navbar Logo */
+.logo-img {
+  height: 40px;
+}
+
+/* Responsive Search Bar */
+.search-container {
+  width: 40%;
+}
+
+.search-bar {
+  border-radius: 25px;
+  padding-left: 15px;
+}
+
+/* Search Button Inside Input */
+.search-btn {
+  border-radius: 25px;
+  background: gainsboro;
+  border: none;
+  color: #666;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}

@@ -1,0 +1,19 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "name": "Mostofa Rezvi",
+      "address": "Azimpur, Dhaka."
+    },
+    {
+      "id": 2,
+      "name": "Raju Ahmed",
+      "address": "Posta, Lalbag, Dhaka."
+    },
+    {
+      "id": 3,
+      "name": "Nusrat Jahan",
+      "address": "Mirpur 1, Dhaka."
+    }
+  ]
+}

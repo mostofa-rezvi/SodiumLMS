@@ -1,0 +1,81 @@
+<div
+  class="sidebar d-flex flex-column p-3 bg-light mt-5"
+  [class.collapsed]="isCollapsed"
+>
+  <!-- Sidebar Toggle Button -->
+  <button class="btn toggle-btn mt-3" (click)="toggleSidebar()">
+    <i
+      class="fas"
+      [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"
+    ></i>
+  </button>
+
+  <!-- Menu Items -->
+  <ul class="nav flex-column mt-5">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">
+        <i class="fas fa-home"></i> <span *ngIf="!isCollapsed">Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-book"></i> <span *ngIf="!isCollapsed">My Courses</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-th-large"></i>
+        <span *ngIf="!isCollapsed">Explore</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-calendar-alt"></i>
+        <span *ngIf="!isCollapsed">Calendar</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-chart-bar"></i>
+        <span *ngIf="!isCollapsed">My Progress</span>
+      </a>
+    </li>
+  </ul>
+
+  <hr />
+
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-users"></i>
+        <span *ngIf="!isCollapsed">Social Space</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-folder"></i> <span *ngIf="!isCollapsed">My Files</span>
+      </a>
+    </li>
+  </ul>
+
+  <hr />
+
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-user"></i> <span *ngIf="!isCollapsed">My Profile</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <i class="fas fa-cog"></i> <span *ngIf="!isCollapsed">Settings</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link text-danger" href="#">
+        <i class="fas fa-sign-out-alt"></i>
+        <span *ngIf="!isCollapsed">Logout</span>
+      </a>
+    </li>
+  </ul>
+</div>

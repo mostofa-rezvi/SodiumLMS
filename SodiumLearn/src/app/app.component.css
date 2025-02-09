@@ -1,0 +1,13 @@
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s;
+}
+
+.collapsed {
+  width: 80px;
+}
+
+.collapsed + .main-content {
+  margin-left: 80px;
+}
