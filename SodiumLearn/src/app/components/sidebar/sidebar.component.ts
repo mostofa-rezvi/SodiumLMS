@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,14 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-  isCollapsed = true; 
+  
+  isCollapsed = false;
+
+  @Output() toggleEvent = new EventEmitter<boolean>();
 
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
-    
-    const contentElement = document.querySelector('.main-content');
-    if (contentElement) {
-      contentElement.classList.toggle('collapsed', this.isCollapsed);
-    }
+    this.toggleEvent.emit(this.isCollapsed);
   }
 }

@@ -1,1 +1,31 @@
-<p>my-progress works!</p>
+<div class="container">
+  <h2 class="text-center my-4">Progress Dashboard</h2>
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Task</th>
+        <th>Progress</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let progress of progressList">
+        <td>{{ progress.task }}</td>
+        <td>
+          <div class="progress">
+            <div
+              class="progress-bar"
+              [style.width.%]="progress.progress"
+              [class.bg-success]="progress.progress >= 75"
+              [class.bg-warning]="
+                progress.progress >= 40 && progress.progress < 75
+              "
+              [class.bg-danger]="progress.progress < 40"
+            >
+              {{ progress.progress }}%
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

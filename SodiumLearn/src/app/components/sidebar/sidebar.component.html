@@ -8,12 +8,12 @@
       class="fas"
       [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"
     ></i>
-  </button>
+  </button>  
 
   <!-- Menu Items -->
   <ul class="nav flex-column mt-5">
     <li class="nav-item">
-      <a class="nav-link active" href="#">
+      <a class="nav-link active" href="">
         <i class="fas fa-home"></i> <span *ngIf="!isCollapsed">Dashboard</span>
       </a>
     </li>
@@ -23,19 +23,19 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="explore">
         <i class="fas fa-th-large"></i>
         <span *ngIf="!isCollapsed">Explore</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="calendar">
         <i class="fas fa-calendar-alt"></i>
         <span *ngIf="!isCollapsed">Calendar</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="progress">
         <i class="fas fa-chart-bar"></i>
         <span *ngIf="!isCollapsed">My Progress</span>
       </a>
@@ -46,13 +46,13 @@
 
   <ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="social-space">
         <i class="fas fa-users"></i>
         <span *ngIf="!isCollapsed">Social Space</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="files">
         <i class="fas fa-folder"></i> <span *ngIf="!isCollapsed">My Files</span>
       </a>
     </li>
@@ -62,17 +62,17 @@
 
   <ul class="nav flex-column">
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="profile">
         <i class="fas fa-user"></i> <span *ngIf="!isCollapsed">My Profile</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
+      <a class="nav-link" href="settings">
         <i class="fas fa-cog"></i> <span *ngIf="!isCollapsed">Settings</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link text-danger" href="#">
+      <a class="nav-link text-danger" href="profile">
         <i class="fas fa-sign-out-alt"></i>
         <span *ngIf="!isCollapsed">Logout</span>
       </a>

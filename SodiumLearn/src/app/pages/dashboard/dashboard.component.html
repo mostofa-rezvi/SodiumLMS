@@ -1,1 +1,129 @@
-<p>dashboard works!</p>
+<div class="container mt-4">
+  <h2>Dashboard</h2>
+
+  <!-- Overview Cards -->
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-white bg-primary mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Total Sales</h5>
+          <p class="card-text">${{ stats.overview?.totalSales }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-success mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Total Users</h5>
+          <p class="card-text">{{ stats.overview?.totalUsers }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-warning mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Total Orders</h5>
+          <p class="card-text">{{ stats.overview?.totalOrders }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-white bg-info mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Active Users</h5>
+          <p class="card-text">{{ stats.overview?.activeUsers }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monthly Stats -->
+  <h3>Monthly Statistics</h3>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5>January</h5>
+          <p>Sales: ${{ stats.monthly?.january?.sales }}</p>
+          <p>Users: {{ stats.monthly?.january?.users }}</p>
+          <p>Orders: {{ stats.monthly?.january?.orders }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5>February</h5>
+          <p>Sales: ${{ stats.monthly?.february?.sales }}</p>
+          <p>Users: {{ stats.monthly?.february?.users }}</p>
+          <p>Orders: {{ stats.monthly?.february?.orders }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <h5>March</h5>
+          <p>Sales: ${{ stats.monthly?.march?.sales }}</p>
+          <p>Users: {{ stats.monthly?.march?.users }}</p>
+          <p>Orders: {{ stats.monthly?.march?.orders }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User List -->
+  <h3 class="mt-4">User List</h3>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Join Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>{{ user.joinDate }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Revenue Breakdown -->
+  <h3 class="mt-4">Revenue by Product</h3>
+  <div class="row">
+    <div
+      *ngFor="let product of stats.revenueByProduct | keyvalue"
+      class="col-md-3"
+    >
+      <div class="card">
+        <div class="card-body">
+          <h5>{{ product.key }}</h5>
+          <p>${{ product.value }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Activity -->
+  <h3 class="mt-4">Recent Activity</h3>
+  <ul class="list-group">
+    <li *ngFor="let activity of recentActivity" class="list-group-item">
+      <strong>{{ activity.user }}</strong>
+      <span *ngIf="activity.type === 'order'"
+        >placed an order of ${{ activity.amount }}</span
+      >
+      <span *ngIf="activity.type === 'registration'">registered</span>
+      <span *ngIf="activity.type === 'subscription'"
+        >subscribed to {{ activity.plan }} plan</span
+      >
+      <small class="text-muted d-block">Date: {{ activity.date }}</small>
+    </li>
+  </ul>
+</div>

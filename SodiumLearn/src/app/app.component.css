@@ -1,10 +1,35 @@
-.content {
-  margin-left: 250px;
-  padding: 20px;
-  transition: margin-left 0.3s;
+.content-expanded {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 250px; 
 }
 
-.content {
-  margin-left: 80px;
-  margin-top: 60px;
+.content-collapsed {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out;
+  margin-left: 80px; 
+}
+
+.content-container {
+  margin-top: 80px;
+  margin-left: 25px;
+  margin-right: 25px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content-expanded {
+  margin-left: 275px; 
+}
+
+.content-collapsed {
+  margin-left: 105px; 
+}
+
+
+app-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;  /* Ensure it stays on top of other elements */
 }

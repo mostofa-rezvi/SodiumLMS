@@ -1,6 +1,6 @@
-<div class="main-content">
+<div class="main-content mb-5">
   <!-- Top Navigation Section -->
-  <div class="d-flex justify-content-end align-items-center p-3 mb-5">
+  <div class="d-flex justify-content-end align-items-center p-3 mb-3">
     <div class="btn-box">
       <button
         class="btn custom-btn highlighted"
@@ -26,7 +26,7 @@
   </div>
 
   <!-- Course Overview Sections -->
-  <div class="course-overview-section position-relative mb-5">
+  <div class="course-overview-section position-relative mb-5" id="overview">
     <!-- Background Image -->
     <img
       src="../../../../assets/image/image 13.jpg"
@@ -72,7 +72,7 @@
             </div>
           </div>
           <div class="progress-info d-flex align-items-center">
-            <div class="progress ms-2" style="width: 250px">
+            <div class="progress ms-2" style="width: 300px">
               <div
                 class="progress-bar"
                 role="progressbar"
@@ -82,7 +82,7 @@
                 aria-valuemax="100"
               ></div>
             </div>
-            <span class="ms-2">56%</span>
+            <span class="ms-2 text-dark"><b>56%</b></span>
           </div>
         </div>
 
@@ -106,7 +106,7 @@
         <!-- Space between two divs -->
 
         <!-- Third div containing Description and Resume Button -->
-        <div style="margin-top: 150px">
+        <div style="margin-top: 100px">
           <!-- Keywords -->
           <div class="keywords mb-3">
             <div class="d-flex flex-wrap gap-2 mb-2">
@@ -146,32 +146,45 @@
   </div>
 
   <!-- Modules Sections  -->
-  <div class="container mt-4">
+  <div class="container mt-4" id="modules">
     <h2 class="mb-3 fw-bold">Module List</h2>
+    <p>
+      <strong> <i class="fa-solid fa-folder"></i> 9 Modules </strong> |
+      <strong> <i class="fa-solid fa-file-lines"></i> 44 Lessons </strong> |
+      <strong> <i class="fa-solid fa-clock"></i> 13+ hrs</strong>
+    </p>
 
     <div class="row">
       <!-- Modules Section (Left) -->
       <div class="col-md-7">
-        <div class="list-group shadow-sm rounded">
-          <div
-            *ngFor="let module of displayedModules"
-            class="list-group-item d-flex justify-content-between align-items-center"
-            [class.active]="selectedModule?.id === module.id"
-            (click)="loadLessons(module)"
-            style="cursor: pointer"
-          >
-            <div class="d-flex align-items-center">
-              <input
-                type="checkbox"
-                class="form-check-input me-2"
-                [checked]="module.completed"
-                disabled
-              />
-              <strong>{{ module.title }}</strong>
+        <div class="card shadow-sm rounded">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Modules</h5>
+            <div class="d-flex flex-column gap-2">
+              <div
+                *ngFor="let module of displayedModules"
+                class="card p-3"
+                [class.border-primary]="selectedModule?.id === module.id"
+                (click)="loadLessons(module)"
+                style="cursor: pointer"
+              >
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <input
+                      type="checkbox"
+                      class="form-check-input me-2"
+                      [checked]="module.completed"
+                      disabled
+                    />
+                    <strong>{{ module.title }}</strong>
+                  </div>
+                  <span class="text-muted small"
+                    >{{ module.lessonCount }} Lessons •
+                    {{ module.duration }}</span
+                  >
+                </div>
+              </div>
             </div>
-            <span class="text-muted small"
-              >{{ module.lessonCount }} Lessons • {{ module.duration }}</span
-            >
           </div>
         </div>
 
@@ -185,73 +198,150 @@
 
       <!-- Lessons Section (Right) -->
       <div class="col-md-5">
-        <h4 class="fw-semibold">Lessons</h4>
-        <div class="list-group shadow-sm rounded">
-          <div
-            *ngFor="let lesson of lessons"
-            class="list-group-item d-flex align-items-center"
-          >
-            <input
-              type="checkbox"
-              class="form-check-input me-2"
-              [checked]="lesson.completed"
-              disabled
-            />
-            <span>{{ lesson.id }} {{ lesson.title }}</span>
+        <div class="card shadow-sm rounded">
+          <div class="card-body">
+            <h4 class="fw-semibold">Lessons</h4>
+            <div class="d-flex flex-column gap-2">
+              <div *ngFor="let lesson of lessons" class="card p-3">
+                <div class="d-flex align-items-center">
+                  <input
+                    type="checkbox"
+                    class="form-check-input me-2"
+                    [checked]="lesson.completed"
+                    disabled
+                  />
+                  <span>{{ lesson.id }} {{ lesson.title }}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Review Section  -->
-  <div class="container mt-4">
-    <h2>Reviews</h2>
-    <p class="text-muted">
-      <span>⭐</span> <span>⭐</span> <span>⭐</span> <span>⭐</span> <span>⭐</span> 12 Reviews
-    </p>
-  
-    <!-- Review Submission Section -->
-    <div class="card p-3 mb-4">
-      <input [(ngModel)]="newReview.name" class="form-control my-2" placeholder="Your Name" />
-      <input [(ngModel)]="newReview.designation" class="form-control my-2" placeholder="Your Designation" />
-      <textarea [(ngModel)]="newReview.review" class="form-control my-2" placeholder="Write a review..."></textarea>
-  
-      <div class="d-flex align-items-center justify-content-between">
-        <div>
-          <span *ngFor="let star of [1, 2, 3, 4, 5]" (click)="newReview.rating = star">
-            <span [class.text-warning]="newReview.rating >= star">⭐</span>
-          </span>
-        </div>
-        <button class="btn btn-primary" (click)="submitReview()">Submit</button>
-      </div>
-    </div>
-  
-    <!-- Reviews Display Section -->
-    <div class="row">
-      <div *ngFor="let review of visibleReviews" class="col-md-4">
-        <div class="card p-3 mb-3">
-          <div class="d-flex align-items-center">
-            <img [src]="review.image" class="rounded-circle me-3" width="50" height="50" />
-            <div>
-              <h5 class="mb-0">{{ review.name }}</h5>
-              <small class="text-muted">{{ review.designation }}</small>
+  <!-- Resources Section  -->
+  <div class="container mt-5 mb-5" id="resources">
+    <h2 class="mb-3 fw-bold">Resources</h2>
+    <p><i class="fa-solid fa-link"></i> 5 Resources</p>
+
+    <div class="row g-4">
+      <!-- Add Bootstrap gutter spacing -->
+      <div class="col-md-4" *ngFor="let resource of resources">
+        <div class="card resource-card">
+          <!-- Clickable Image Redirects to Dynamic Link -->
+          <a [href]="resource.link" target="_blank" class="image-container">
+            <img
+              [src]="resource.image"
+              class="card-img-top"
+              alt="Resource Image"
+            />
+            <!-- Overlay Text at Bottom Left -->
+            <div class="overlay">
+              <p class="card-text">{{ resource.description }}</p>
             </div>
-          </div>
-          <p class="mt-2">{{ review.review }}</p>
-          <p class="text-warning">
-            <span *ngFor="let star of [1, 2, 3, 4, 5]">
-              <span [class.text-warning]="review.rating >= star">⭐</span>
-            </span>
-          </p>
-          <small class="text-muted">Posted on {{ review.date }}</small>
+          </a>
         </div>
       </div>
     </div>
-  
-    <button class="btn btn-outline-primary w-100 mt-3" (click)="toggleShowAll()">
-      {{ showAll ? 'Show Less' : 'See All' }}
-    </button>
   </div>
-  
+
+  <!-- Review Section  -->
+  <div id="review">
+    <div class="container mt-4">
+      <h2>Reviews</h2>
+      <div class="d-flex align-items-center text-muted mb-4">
+        <div class="d-flex gap-1">
+          <i class="fa-solid fa-star text-secondary"></i>
+          <i class="fa-solid fa-star text-secondary"></i>
+          <i class="fa-solid fa-star text-secondary"></i>
+          <i class="fa-solid fa-star text-secondary"></i>
+          <i class="fa-solid fa-star text-secondary"></i>
+        </div>
+        <p class="mb-0 text-secondary">(12 Reviews)</p>
+      </div>
+
+      <!-- Review Submission Section -->
+      <div class="card p-3 mb-4">
+        <div class="row">
+          <!-- Left Section: Name and Designation (30%) -->
+          <div class="col-3">
+            <input
+              [(ngModel)]="newReview.name"
+              class="form-control mb-2"
+              placeholder="Your Name"
+            />
+            <input
+              [(ngModel)]="newReview.designation"
+              class="form-control"
+              placeholder="Your Designation"
+            />
+          </div>
+
+          <!-- Right Section: Review (60%) -->
+          <div class="col-6 mt-2">
+            <textarea
+              [(ngModel)]="newReview.review"
+              class="form-control"
+              placeholder="Write a review..."
+            ></textarea>
+          </div>
+
+          <!-- Rating and Submit Button -->
+          <div class="d-flex align-items-center justify-content-between col-3">
+            <div class="mb-1">
+              <span
+                *ngFor="let star of [1, 2, 3, 4, 5]"
+                (click)="newReview.rating = star"
+              >
+                <span [class.text-warning]="newReview.rating >= star">⭐</span>
+              </span>
+            </div>
+            <button class="btn btn-primary" (click)="submitReview()">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Display Section -->
+      <div class="row">
+        <div *ngFor="let review of visibleReviews" class="col-md-4">
+          <div class="card p-3 mb-3">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <i class="bi bi-person-circle fs-3 text-secondary"></i>
+                  <!-- Placeholder for profile icon -->
+                </div>
+                <div>
+                  <h5 class="mb-1">{{ review.name }}</h5>
+                  <small class="text-muted d-block">{{
+                    review.designation
+                  }}</small>
+                </div>
+              </div>
+              <small class="text-muted"
+                >Posted on <br />
+                {{ review.date }}</small
+              >
+            </div>
+
+            <p class="mt-2">{{ review.review }}</p>
+            <p class="text-warning">
+              <span *ngFor="let star of [1, 2, 3, 4, 5]">
+                <span [class.text-warning]="review.rating >= star">⭐</span>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <button class="btn" (click)="toggleShowAll()">
+          {{ showAll ? "Show Less" : "See All" }}
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

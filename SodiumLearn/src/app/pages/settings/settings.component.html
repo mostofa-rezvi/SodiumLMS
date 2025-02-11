@@ -1,1 +1,83 @@
-<p>settings works!</p>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white text-center">
+          <h3>Settings</h3>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <!-- Username Field -->
+            <div class="mb-3">
+              <label for="username" class="form-label">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username"
+                [(ngModel)]="username"
+                name="username"
+                placeholder="Enter your username"
+                required
+              />
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                [(ngModel)]="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <!-- Password Field -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                [(ngModel)]="password"
+                name="password"
+                placeholder="Enter a new password"
+                required
+              />
+            </div>
+
+            <!-- Confirm Password Field -->
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label"
+                >Confirm Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                [(ngModel)]="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                required
+              />
+            </div>
+
+            <!-- Save Changes Button -->
+            <button
+              type="submit"
+              class="btn btn-primary w-100 mt-3"
+              [disabled]="
+                !username || !email || !password || password !== confirmPassword
+              "
+            >
+              Save Changes
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

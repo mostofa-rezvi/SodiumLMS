@@ -1,1 +1,20 @@
-<p>calendar works!</p>
+<div class="container mt-5">
+  <h2 class="text-center">📅 Calendar </h2>
+
+  <div class="row justify-content-center mt-4">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-4">
+        <h4 class="mb-3">Select a Date</h4>
+        <input
+          type="text"
+          class="form-control"
+          bsDatepicker
+          [(ngModel)]="selectedDate"
+        />
+        <p class="mt-3">
+          Today: <strong>{{ selectedDate | date : "fullDate" }}</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

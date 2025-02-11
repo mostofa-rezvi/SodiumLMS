@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Review } from './review.model';
+import { Resource } from './resource.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,5 +26,9 @@ export class MyCoursesService {
 
   addReview(review: Review): Observable<Review> {
     return this.http.post<Review>(`${this.apiUrl}/reviews`, review);
+  }
+
+  getResources(): Observable<Resource[]> {
+    return this.http.get<Resource[]>(`${this.apiUrl}/resources`);
   }
 }

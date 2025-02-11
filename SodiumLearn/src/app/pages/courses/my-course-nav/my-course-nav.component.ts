@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MyCoursesService } from '../../services/my-courses.service';
-import { Review } from '../../services/review.model';
+import { MyCoursesService } from '../services/my-courses.service';
+import { Review } from '../services/review.model';
+import { Resource } from '../services/resource.model';
 
 @Component({
   selector: 'app-my-course-nav',
@@ -27,11 +28,14 @@ export class MyCourseNavComponent implements OnInit {
     date: new Date().toDateString()
   };
 
+  resources: Resource[] = [];
+
   constructor(private courseService: MyCoursesService) {}
 
   ngOnInit(): void {
     this.fetchModules();
     this.fetchReviews();
+    this.fetchResource();
   }
 
   fetchModules() {
@@ -50,6 +54,12 @@ export class MyCourseNavComponent implements OnInit {
     this.courseService.getReviews().subscribe((data) => {
       this.reviews = data;
       this.updateVisibleReviews();
+    });
+  }
+
+  fetchResource(){
+    this.courseService.getResources().subscribe((data) => {
+      this.resources = data;
     });
   }
 

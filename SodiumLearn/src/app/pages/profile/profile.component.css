@@ -1,0 +1,33 @@
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.card-title {
+  color: #333;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 8px 15px;
+  font-weight: 500;
+}
+
+.rounded-circle {
+  border: 3px solid #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+  margin: 15px 0;
+}
+
+.btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}

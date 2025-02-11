@@ -30,10 +30,40 @@
 
       <!-- Right Section -->
       <div class="d-flex align-items-center ms-auto">
-        <!-- Notification Icon -->
-        <button class="btn btn-light me-3">
-          <i class="fa-regular fa-bell"></i>
-        </button>
+        <!-- Notification Button -->
+        <div class="dropdown">
+          <!-- Notification Button (Bell Icon Only) -->
+          <button
+            class="btn btn-light me-3"
+            type="button"
+            id="notificationsDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-regular fa-bell fa-lg"></i>
+          </button>
+
+          <!-- Dropdown Menu with End Alignment -->
+          <ul
+            class="dropdown-menu dropdown-menu-end shadow-lg rounded-3 p-3"
+            aria-labelledby="notificationsDropdown"
+          >
+            <li *ngIf="notifications.length === 0">
+              <a class="dropdown-item text-center text-muted" href="profile">
+                No notifications
+              </a>
+            </li>
+            <li *ngFor="let notification of notifications" class="mb-2">
+              <a
+                class="dropdown-item d-flex align-items-center hover-bg-light"
+                href="my-curses-nav"
+              >
+                <i class="fa-regular fa-bell me-2"></i>
+                <span>{{ notification.message }}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
         <!-- User Profile -->
         <div class="d-flex align-items-center">

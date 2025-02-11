@@ -1,7 +1,11 @@
+<div class="d-flex">
+  <app-navbar></app-navbar>
 
-<app-navbar></app-navbar>
-<app-sidebar></app-sidebar>
- 
-<div class="content">
-  <router-outlet></router-outlet>
+  <app-sidebar (toggleEvent)="toggleSidebar()"></app-sidebar>
+
+  <div 
+    [ngClass]="{'content-expanded': isExpanded, 'content-collapsed': !isExpanded}" 
+    class="content-container">
+    <router-outlet></router-outlet>
+  </div>
 </div>

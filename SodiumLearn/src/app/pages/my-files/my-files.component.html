@@ -1,1 +1,130 @@
-<p>my-files works!</p>
+<div class="container py-4">
+  <!-- Header with search and upload button -->
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>My Files</h2>
+    <div class="d-flex gap-3">
+      <div class="input-group" style="width: 300px">
+        <input type="text" class="form-control" placeholder="Search files..." />
+        <button class="btn btn-outline-secondary" type="button">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+      <button class="btn btn-primary">
+        <i class="bi bi-upload me-2"></i>Upload
+      </button>
+    </div>
+  </div>
+
+  <!-- Storage status -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">Storage Used</h6>
+      <div class="progress" style="height: 20px">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 75%"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          75%
+        </div>
+      </div>
+      <small class="text-muted mt-2 d-block">15GB of 20GB used</small>
+    </div>
+  </div>
+
+  <!-- File list -->
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Modified</th>
+              <th scope="col">Size</th>
+              <th scope="col">Type</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-file-pdf text-danger fs-4 me-2"></i>
+                  <span>Document.pdf</span>
+                </div>
+              </td>
+              <td>Feb 10, 2024</td>
+              <td>2.5 MB</td>
+              <td>PDF</td>
+              <td>
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-secondary">
+                    <i class="bi bi-share"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-file-image text-success fs-4 me-2"></i>
+                  <span>Image.jpg</span>
+                </div>
+              </td>
+              <td>Feb 9, 2024</td>
+              <td>1.8 MB</td>
+              <td>Image</td>
+              <td>
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-secondary">
+                    <i class="bi bi-share"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-file-earmark-word text-primary fs-4 me-2"></i>
+                  <span>Report.docx</span>
+                </div>
+              </td>
+              <td>Feb 8, 2024</td>
+              <td>500 KB</td>
+              <td>Word</td>
+              <td>
+                <div class="btn-group">
+                  <button class="btn btn-sm btn-outline-primary">
+                    <i class="bi bi-download"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-secondary">
+                    <i class="bi bi-share"></i>
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
