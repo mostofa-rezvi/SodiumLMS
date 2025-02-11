@@ -1,0 +1,46 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.navbar {
+  z-index: 1000;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  height: 100vh; /* Full height of the viewport */
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  z-index: 999; /* Ensure sidebar stays above content */
+}
+
+.sidebar.collapsed {
+  width: 80px; /* Adjust for collapsed state */
+}
+
+.sidebar.expanded {
+  width: 250px; /* Full width of the sidebar */
+}
+
+/* Main Content Area */
+.main-content {
+  margin-top: 60px; /* Space for the fixed navbar */
+  margin-left: 250px; /* Default margin for expanded sidebar */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.collapsed {
+  margin-left: 80px; /* Adjust for collapsed sidebar */
+}
+
+/* Navbar height */
+.navbar {
+  height: 60px;
+}

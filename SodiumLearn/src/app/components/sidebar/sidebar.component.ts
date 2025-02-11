@@ -10,5 +10,10 @@ export class SidebarComponent {
 
   toggleSidebar() {
     this.isCollapsed = !this.isCollapsed;
+    
+    const contentElement = document.querySelector('.main-content');
+    if (contentElement) {
+      contentElement.classList.toggle('collapsed', this.isCollapsed);
+    }
   }
 }

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { MyCoursesComponent } from './pages/my-courses/my-courses.component';
+import { MyCoursesComponent } from './pages/courses/my-courses/my-courses.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { CalendarComponent } from './pages/calendar/calendar.component';
 import { MyProgressComponent } from './pages/my-progress/my-progress.component';
@@ -14,6 +14,9 @@ import { SocialSpaceComponent } from './pages/social-space/social-space.componen
 import { MyFilesComponent } from './pages/my-files/my-files.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { MyCourseNavComponent } from './pages/courses/my-course-nav/my-course-nav.component';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,19 @@ import { ProfileComponent } from './pages/profile/profile.component';
     SocialSpaceComponent,
     MyFilesComponent,
     SettingsComponent,
-    ProfileComponent
+    ProfileComponent,
+    MyCourseNavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })

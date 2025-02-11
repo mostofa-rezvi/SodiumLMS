@@ -1,19 +1,335 @@
 {
-  "locations": [
+  "courses": [
     {
       "id": 1,
-      "name": "Mostofa Rezvi",
-      "address": "Azimpur, Dhaka."
+      "title": "Advanced Project Management: Navigating Complexity with Confidence",
+      "tags": [
+        "Project Management",
+        "Leadership",
+        "Risk Management"
+      ],
+      "description": "In today’s fast-paced business environment, managing complex projects is a critical skill for any professional. This course provides an in-depth exploration of advanced project management techniques, including risk management, resource allocation, and stakeholder communication.",
+      "progress": 56,
+      "reviews": 12,
+      "rating": 5
+    }
+  ],
+  "modules": [
+    {
+      "id": 1,
+      "title": "Foundations of Advanced Project Management",
+      "completed": true,
+      "lessonCount": 10,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "1.1",
+          "title": "Overview of Project Management",
+          "completed": true
+        },
+        {
+          "id": "1.2",
+          "title": "Understanding Project Life Cycles",
+          "completed": true
+        },
+        {
+          "id": "1.3",
+          "title": "The Role of the Project Manager",
+          "completed": true
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Raju Ahmed",
-      "address": "Posta, Lalbag, Dhaka."
+      "title": "Strategic Risk Management",
+      "completed": true,
+      "lessonCount": 8,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "2.1",
+          "title": "Introduction to Risk Management",
+          "completed": true
+        },
+        {
+          "id": "2.2",
+          "title": "Assessing and Mitigating Risks",
+          "completed": true
+        }
+      ]
     },
     {
       "id": 3,
-      "name": "Nusrat Jahan",
-      "address": "Mirpur 1, Dhaka."
+      "title": "Resource Allocation and Optimisation",
+      "completed": true,
+      "lessonCount": 10,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "3.1",
+          "title": "Introduction to Resource Allocation and Optimisation",
+          "completed": true
+        },
+        {
+          "id": "3.2",
+          "title": "The Role of the Resource Allocation",
+          "completed": true
+        },
+        {
+          "id": "3.3",
+          "title": "Assessing and Mitigating Resource Allocation and Optimisation",
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Stakeholder Communication and Engagement",
+      "completed": true,
+      "lessonCount": 4,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "4.1",
+          "title": "Understanding Stakeholder Needs",
+          "completed": true
+        },
+        {
+          "id": "4.2",
+          "title": "Effective Communication Strategies",
+          "completed": true
+        },
+        {
+          "id": "4.3",
+          "title": "Engagement Techniques for Stakeholders",
+          "completed": true
+        },
+        {
+          "id": "4.4",
+          "title": "Conflict Resolution in Stakeholder Management",
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Advanced Project Monitoring and Control",
+      "completed": true,
+      "lessonCount": 5,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "5.1",
+          "title": "Key Metrics for Project Monitoring",
+          "completed": true
+        },
+        {
+          "id": "5.2",
+          "title": "Using Data for Decision Making",
+          "completed": true
+        },
+        {
+          "id": "5.3",
+          "title": "Implementing Quality Control Measures",
+          "completed": true
+        },
+        {
+          "id": "5.4",
+          "title": "Project Performance Analysis",
+          "completed": true
+        },
+        {
+          "id": "5.5",
+          "title": "Ensuring Continuous Improvement",
+          "completed": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Case Studies and Real-World Applications",
+      "completed": false,
+      "lessonCount": 3,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "6.1",
+          "title": "Real-World Project Success Stories",
+          "completed": true
+        },
+        {
+          "id": "6.2",
+          "title": "Lessons Learned from Failures",
+          "completed": false
+        },
+        {
+          "id": "6.3",
+          "title": "Best Practices in Project Management",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Project Finance and Budgeting",
+      "completed": false,
+      "lessonCount": 4,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "7.1",
+          "title": "Budget Planning Techniques",
+          "completed": false
+        },
+        {
+          "id": "7.2",
+          "title": "Cost Estimation Methods",
+          "completed": false
+        },
+        {
+          "id": "7.3",
+          "title": "Financial Risk Management",
+          "completed": false
+        },
+        {
+          "id": "7.4",
+          "title": "Tracking Expenses Effectively",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Agile and Scrum Methodologies",
+      "completed": false,
+      "lessonCount": 5,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "8.1",
+          "title": "Introduction to Agile Principles",
+          "completed": false
+        },
+        {
+          "id": "8.2",
+          "title": "Scrum Framework Overview",
+          "completed": false
+        },
+        {
+          "id": "8.3",
+          "title": "Sprint Planning and Execution",
+          "completed": false
+        },
+        {
+          "id": "8.4",
+          "title": "Roles in Agile Teams",
+          "completed": false
+        },
+        {
+          "id": "8.5",
+          "title": "Measuring Agile Success",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Risk Mitigation Strategies",
+      "completed": false,
+      "lessonCount": 3,
+      "duration": "1hr",
+      "lessons": [
+        {
+          "id": "9.1",
+          "title": "Identifying Potential Risks",
+          "completed": false
+        },
+        {
+          "id": "9.2",
+          "title": "Developing Mitigation Plans",
+          "completed": false
+        },
+        {
+          "id": "9.3",
+          "title": "Monitoring and Adapting Strategies",
+          "completed": false
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Yee Tang Fi",
+      "designation": "Senior Delivery Manager",
+      "rating": 5,
+      "review": "I recently completed the Advanced Project Management: Navigating Complexity with Confidence course, and I must say it exceeded my expectations.",
+      "image": "assets/img1.jpg",
+      "date": "19th Sep"
+    },
+    {
+      "id": 2,
+      "name": "Yee Tang Fi",
+      "designation": "Senior Delivery Manager",
+      "rating": 5,
+      "review": "The course structure was well-designed, and the real-world case studies were very insightful.",
+      "date": "19th Sep"
+    },
+    {
+      "id": 3,
+      "name": "Yee Tang Fi",
+      "designation": "Senior Delivery Manager",
+      "rating": 5,
+      "review": "Highly recommend this course to professionals looking to enhance their project management skills!",
+      "date": "19th Sep"
+    },
+    {
+      "id": 4,
+      "name": "Mostofa ",
+      "designation": "Rezvi",
+      "rating": 0,
+      "review": "Okay for everythings",
+      "date": "Mon Feb 10 2025"
+    },
+    {
+      "id": 5,
+      "name": "Aminur ",
+      "designation": "Rashid",
+      "rating": 0,
+      "review": "okay",
+      "date": "Mon Feb 10 2025"
+    },
+    {
+      "id": 6,
+      "name": "okay ",
+      "designation": "oaky",
+      "rating": 0,
+      "review": "oaky",
+      "date": "Mon Feb 10 2025"
+    },
+    {
+      "id": 7,
+      "name": "oaky",
+      "designation": "oaky",
+      "rating": 0,
+      "review": "oaky",
+      "date": "Mon Feb 10 2025"
+    },
+    {
+      "id": 8,
+      "name": "fdsg",
+      "designation": "gfdgs",
+      "rating": 0,
+      "review": "sdfgfdgdfgfdgdfg",
+      "date": "Mon Feb 10 2025"
+    },
+    {
+      "id": 9,
+      "name": "sdfasfd",
+      "designation": "sdfasdf",
+      "rating": 0,
+      "review": "sadfdsfdf",
+      "date": "Mon Feb 10 2025"
     }
   ]
 }
