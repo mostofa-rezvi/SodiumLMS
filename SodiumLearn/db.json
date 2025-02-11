@@ -3,7 +3,11 @@
     {
       "id": 1,
       "title": "Advanced Project Management: Navigating Complexity with Confidence",
-      "tags": ["Project Management", "Leadership", "Risk Management"],
+      "tags": [
+        "Project Management",
+        "Leadership",
+        "Risk Management"
+      ],
       "description": "In today’s fast-paced business environment, managing complex projects is a critical skill for any professional. This course provides an in-depth exploration of advanced project management techniques, including risk management, resource allocation, and stakeholder communication.",
       "progress": 56,
       "reviews": 12,
@@ -350,6 +354,15 @@
       "rating": 5,
       "review": "Excellent course! Very informative and useful in my daily work.",
       "date": "Sat Feb 07 2025"
+    },
+    {
+      "id": 13,
+      "name": "Mostofa Rezvi",
+      "designation": "Programmer",
+      "rating": 0,
+      "review": "Excellent course! I found the material very relevant and easy to apply.",
+      "image": "",
+      "date": "Tue Feb 11 2025"
     }
   ],
   "resources": [
@@ -569,10 +582,25 @@
     }
   ],
   "notifications": [
-    { "id": 1, "message": "New message from Sarah." },
-    { "id": 2, "message": "Your profile picture was updated." },
-    { "id": 3, "message": "Your password has been changed." },
-    { "id": 4, "message": "New comment on your post." },
-    { "id": 5, "message": "Someone followed you!" }
+    {
+      "id": 1,
+      "message": "New message from Sarah."
+    },
+    {
+      "id": 2,
+      "message": "Your profile picture was updated."
+    },
+    {
+      "id": 3,
+      "message": "Your password has been changed."
+    },
+    {
+      "id": 4,
+      "message": "New comment on your post."
+    },
+    {
+      "id": 5,
+      "message": "Someone followed you!"
+    }
   ]
 }

@@ -2,23 +2,24 @@
   class="sidebar d-flex flex-column p-3 bg-light mt-5"
   [ngClass]="{ collapsed: isCollapsed, expanded: !isCollapsed }"
 >
-  <!-- Sidebar Toggle Button -->
+  <!-- Toggle Button -->
   <button class="btn toggle-btn mt-3" (click)="toggleSidebar()">
     <i
       class="fas"
       [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"
     ></i>
-  </button>  
+  </button>
 
   <!-- Menu Items -->
   <ul class="nav flex-column mt-5">
+    <hr />
     <li class="nav-item">
-      <a class="nav-link active" href="">
+      <a class="nav-link active" href="dashboard">
         <i class="fas fa-home"></i> <span *ngIf="!isCollapsed">Dashboard</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="my-curses-nav">
+      <a class="nav-link" href="">
         <i class="fas fa-book"></i> <span *ngIf="!isCollapsed">My Courses</span>
       </a>
     </li>
@@ -78,4 +79,6 @@
       </a>
     </li>
   </ul>
+
+  <hr />
 </div>

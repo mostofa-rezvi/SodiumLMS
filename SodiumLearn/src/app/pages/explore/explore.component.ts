@@ -5,7 +5,7 @@ import { DemoCourse } from './explore.model';
 @Component({
   selector: 'app-explore',
   templateUrl: './explore.component.html',
-  styleUrl: './explore.component.css'
+  styleUrl: './explore.component.css',
 })
 export class ExploreComponent implements OnInit {
   courses: DemoCourse[] = [];
@@ -13,7 +13,7 @@ export class ExploreComponent implements OnInit {
   constructor(private courseService: ExploreService) {}
 
   ngOnInit(): void {
-    this.courseService.getCourses().subscribe(data => {
+    this.courseService.getCourses().subscribe((data) => {
       this.courses = data;
     });
   }

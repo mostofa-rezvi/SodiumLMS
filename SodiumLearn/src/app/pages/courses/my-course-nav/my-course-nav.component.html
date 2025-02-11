@@ -35,7 +35,7 @@
       style="border-radius: 10px"
     />
 
-    <!-- Section Content -->
+    <!-- Content Section -->
     <div class="content container py-3 position-relative z-index-2">
       <div class="content-area">
         <!-- First div containing Buttons and Progress Bar -->
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-        <!-- Second div containing Course Heading and Keywords -->
+        <!-- Course Heading -->
         <div class="mb-5 mt-0" style="width: 50%">
           <!-- Course Heading -->
           <h2
@@ -103,11 +103,8 @@
           </h2>
         </div>
 
-        <!-- Space between two divs -->
-
-        <!-- Third div containing Description and Resume Button -->
+        <!-- Description and Resume Button -->
         <div style="margin-top: 100px">
-          <!-- Keywords -->
           <div class="keywords mb-3">
             <div class="d-flex flex-wrap gap-2 mb-2">
               <span class="badge bg-light text-dark">Project Management</span>
@@ -153,7 +150,6 @@
       <strong> <i class="fa-solid fa-file-lines"></i> 44 Lessons </strong> |
       <strong> <i class="fa-solid fa-clock"></i> 13+ hrs</strong>
     </p>
-
     <div class="row">
       <!-- Modules Section (Left) -->
       <div class="col-md-7">
@@ -226,17 +222,14 @@
     <p><i class="fa-solid fa-link"></i> 5 Resources</p>
 
     <div class="row g-4">
-      <!-- Add Bootstrap gutter spacing -->
       <div class="col-md-4" *ngFor="let resource of resources">
         <div class="card resource-card">
-          <!-- Clickable Image Redirects to Dynamic Link -->
           <a [href]="resource.link" target="_blank" class="image-container">
             <img
               [src]="resource.image"
               class="card-img-top"
               alt="Resource Image"
             />
-            <!-- Overlay Text at Bottom Left -->
             <div class="overlay">
               <p class="card-text">{{ resource.description }}</p>
             </div>
@@ -261,10 +254,9 @@
         <p class="mb-0 text-secondary">(12 Reviews)</p>
       </div>
 
-      <!-- Review Submission Section -->
+      <!-- Review Submit -->
       <div class="card p-3 mb-4">
         <div class="row">
-          <!-- Left Section: Name and Designation (30%) -->
           <div class="col-3">
             <input
               [(ngModel)]="newReview.name"
@@ -277,8 +269,6 @@
               placeholder="Your Designation"
             />
           </div>
-
-          <!-- Right Section: Review (60%) -->
           <div class="col-6 mt-2">
             <textarea
               [(ngModel)]="newReview.review"
@@ -286,8 +276,6 @@
               placeholder="Write a review..."
             ></textarea>
           </div>
-
-          <!-- Rating and Submit Button -->
           <div class="d-flex align-items-center justify-content-between col-3">
             <div class="mb-1">
               <span
@@ -304,7 +292,7 @@
         </div>
       </div>
 
-      <!-- Reviews Display Section -->
+      <!-- All Reviews -->
       <div class="row">
         <div *ngFor="let review of visibleReviews" class="col-md-4">
           <div class="card p-3 mb-3">
@@ -312,7 +300,6 @@
               <div class="d-flex align-items-center">
                 <div class="me-3">
                   <i class="bi bi-person-circle fs-3 text-secondary"></i>
-                  <!-- Placeholder for profile icon -->
                 </div>
                 <div>
                   <h5 class="mb-1">{{ review.name }}</h5>

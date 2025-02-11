@@ -11,8 +11,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { MyCourseNavComponent } from './pages/courses/my-course-nav/my-course-nav.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'my-curses-nav', component: MyCourseNavComponent},
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: MyCourseNavComponent},
   { path: 'explore', component: ExploreComponent },
   { path: 'calendar', component: CalendarComponent },
   { path: 'progress', component: MyProgressComponent },

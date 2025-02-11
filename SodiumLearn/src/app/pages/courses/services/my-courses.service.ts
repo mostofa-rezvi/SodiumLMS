@@ -5,7 +5,7 @@ import { Review } from './review.model';
 import { Resource } from './resource.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MyCoursesService {
   private apiUrl = 'http://localhost:3000';

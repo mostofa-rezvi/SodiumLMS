@@ -1,4 +1,3 @@
-
 export interface DemoCourse {
   id: number;
   title: string;

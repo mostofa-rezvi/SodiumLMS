@@ -4,10 +4,9 @@ import { DemoCourse } from './explore.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ExploreService {
-
   private apiUrl = 'http://localhost:3000/democourses';
 
   constructor(private http: HttpClient) {}

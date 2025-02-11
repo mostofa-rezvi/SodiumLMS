@@ -3,9 +3,13 @@
 
   <app-sidebar (toggleEvent)="toggleSidebar()"></app-sidebar>
 
-  <div 
-    [ngClass]="{'content-expanded': isExpanded, 'content-collapsed': !isExpanded}" 
-    class="content-container">
+  <div
+    [ngClass]="{
+      'content-expanded': isExpanded,
+      'content-collapsed': !isExpanded
+    }"
+    class="content-container"
+  >
     <router-outlet></router-outlet>
   </div>
 </div>
